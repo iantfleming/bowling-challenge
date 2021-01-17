@@ -7,12 +7,29 @@ class Scoreboard {
   };
 
   addFrame(frame) {
-  frames = []
-  for (let i = 0; i < 4; i++) {
-    frames.push(frame);
+    for(var i = 0; i < frame.length; i++){
+      this.frames = this.frames.concat(frame[i]);
+      // console.log(this.frames);
+    };
     console.log(frames);
+    this.score += this._sum(frames);
+    // this.score += this.frames.sum;
+    console.log(this._sum(frames));
   };
- };
+
+  score() {
+    return this.score;
+  };
+
+  _sum(arr) {
+    var s = 0;
+    for(var i= 0; i<arr.length; i ++){
+      s = s + arr[i];
+    }
+    console.log(s);
+  }
+};
+
 
 
 // frames = []
@@ -20,20 +37,8 @@ class Scoreboard {
 // frame.push([2, 7])
 // for(var i = 0; i < frame.length; i++){
 //   frames = frames.concat(frame[i]);
-
-
-  // score() {
-  //   return this.score;
-  // };
-
-  // addFrame(frame) {
-    // for(var i = 0; i < frame.length; i++){
-    //   frame = frame.concat(frame[i]);
-    // };
-    // console.log(frame);
-    // this.frames.push(frame);
-    // console.log(this.frames);
-    // this.score += frame.sum;
-    // console.log(frame.sum);
-
-};
+// };
+//
+// console.log(frames);
+// a = frames.sum;
+// console.log(a);
