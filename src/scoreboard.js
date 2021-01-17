@@ -13,9 +13,14 @@ class Scoreboard {
     };
     return this.frames
     console.log(this.frames);
-    this.score += this._sum(frames);
+    // this.score += this._sum(frames);
     // this.score += this.frames.sum;
+    sum = this.frames.reduce((accumulator, currentValue) => {
+      return accumulator + currentValue;
+    }, 0);
+    return this.score += sum;
   };
+
 
   score() {
     return this.score;
