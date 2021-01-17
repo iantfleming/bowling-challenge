@@ -11,10 +11,10 @@ class Scoreboard {
       this.frames = this.frames.concat(frame[i]);
       // console.log(this.frames);
     };
-    console.log(frames);
+    return this.frames
+    console.log(this.frames);
     this.score += this._sum(frames);
     // this.score += this.frames.sum;
-    console.log(this._sum(frames));
   };
 
   score() {
